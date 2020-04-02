@@ -8,7 +8,7 @@ import Layout from '../../components/Layout'
 
 // Elements
 import Hero from './Hero'
-// import Blogs from './Blogs'
+import Blogs from './Blogs'
 // import Intro from './Intro'
 import Footer from './Footer'
 // import APIShowcase from './APIShowcase'
@@ -20,7 +20,7 @@ const LandingPage = () => (
     {/* <APIShowcase /> */}
     {/* <Intro /> */}
     <ProjectShowcase />
-    {/* <Blogs /> */}
+    <Blogs />
     <Footer /> 
   </Layout>
 )
