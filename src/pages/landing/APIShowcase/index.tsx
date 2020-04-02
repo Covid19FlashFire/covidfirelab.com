@@ -11,7 +11,14 @@ const APIShowcase = () => (
         <CardList />
       </div>
       <div className="columns is-centered" style={{marginTop: 30}}>
-        <button className="button is-link">See more</button>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/Covid19FlashFire"
+          className="button is-link"
+          style={{marginLeft: 10}}>
+          See more
+        </a>
       </div>
     </div>
   </section>

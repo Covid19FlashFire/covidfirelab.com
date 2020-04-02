@@ -16,7 +16,7 @@ const Card = ({repo}) => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href={repo.endpoint}
+            href={repo.uri}
             className="is-size-6 has-text-weight-semibold"
             style={{marginLeft: 10}}>
             {repo.title}
@@ -42,10 +42,11 @@ const Card = ({repo}) => {
 }
 
 const colors: {[key: string]: any} = {
-  json: '#F1E05A',
+  python: '#3572A5',
+  javascript: '#F1E05A',
 }
 
-const styles = {
+const styles: any = {
   container: {
     width: '90%',
     padding: 16,
