@@ -4,13 +4,13 @@ import React from 'react'
 import Card from './Card'
 
 // Constatns
-import CONSTANTS from '../../../constants'
+import CONSTANTS from '../../../constants/index'
 
 const CardList = () => (
   <>
     {CONSTANTS.blogs.DATA.map((blog, index) => (
-      <div className="column is-one-third">
-        <Card blog={blog} key={index} />
+      <div key={index} className="column is-one-third">
+        <Card blog={blog} />
       </div>
     ))}
   </>

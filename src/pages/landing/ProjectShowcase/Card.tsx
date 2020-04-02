@@ -6,7 +6,7 @@ interface Props {
     title: string
     description: string
     language: string
-    uri: string
+    url: string
   }
 }
 
@@ -26,7 +26,7 @@ const Card = ({repo}: Props) => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href={repo.uri}
+            href={repo.url}
             className="is-size-6 has-text-weight-semibold"
             style={{marginLeft: 10}}>
             {repo.title}

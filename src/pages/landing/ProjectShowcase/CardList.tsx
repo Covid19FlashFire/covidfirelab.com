@@ -4,23 +4,16 @@ import React from 'react'
 import Card from './Card'
 
 // Constatns
-import CONSTANTS from '../../../constants'
+import CONSTANTS from '../../../constants/index'
 
 const CardList = () => (
   <>
     {CONSTANTS.projects.DATA.map((repo, index) => (
-      <div className="column is-half" style={styles.centered}>
-        <Card repo={repo} key={index} />
+      <div key={index} className="column is-half">
+        <Card repo={repo} />
       </div>
     ))}
   </>
 )
-
-const styles = {
-  centered: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-}
 
 export default CardList
