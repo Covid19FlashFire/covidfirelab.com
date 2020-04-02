@@ -1,0 +1,38 @@
+.landing-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  background: #2d2d30;
+
+  background-color: #21D4FD;
+  background-image: linear-gradient(339deg, #21D4FD 0%, #B721FF 100%);
+
+  box-shadow: 2px 2px 10px #769BFFAA;
+
+  padding: 0 4em;
+
+  .container {
+    flex-direction: column;
+    color: white;
+
+    h1,
+    h2 {
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      line-height: 1.5em;
+      font-weight: 500;
+
+      span {
+        color: yellow;
+      }
+    }
+  }
+}

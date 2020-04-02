@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `COVID FlashFire Labs`,
+    description: `Projects and APIs for solving the COVID-19 crisis, by Thai developers.`,
+    author: `COVID FlashFire Labs`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -29,6 +29,24 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
+    'gatsby-plugin-typescript',
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        postCssPlugins: [
+          require('tailwindcss'),
+          require('./tailwind.config.js'),
+        ],
+      },
+    },
+    'gatsby-plugin-emotion',
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: `src/typography`,
+        omitGoogleFont: false,
+      },
+    },
   ],
 }

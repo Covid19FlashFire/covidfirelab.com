@@ -1,7 +1,31 @@
 {
-  "endOfLine": "lf",
-  "semi": false,
-  "singleQuote": false,
+  "printWidth": 80,
   "tabWidth": 2,
-  "trailingComma": "es5"
+  "singleQuote": true,
+  "trailingComma": "all",
+  "bracketSpacing": false,
+  "semi": false,
+  "useTabs": false,
+  "parser": "babel",
+  "jsxBracketSameLine": true,
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "options": {
+        "parser": "typescript"
+      }
+    },
+    {
+      "files": [
+        "*.json",
+        ".prettierrc"
+      ],
+      "options": {
+        "parser": "json-stringify"
+      }
+    }
+  ]
 }
