@@ -10,7 +10,7 @@ const DATA = [
     title: 'Dataset',
     description: 'Dataset Database และ API ที่พร้อมใช้งานสำหรับสถานการณ์ COVID-19 ของประเทศ',
     type: 'JSON',
-    endpoint: ''
+    uri: ''
   },
 ]
 

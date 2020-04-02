@@ -1,6 +1,16 @@
 import React from 'react'
 
-const Card = ({repo}) => {
+interface Props {
+  repo: {
+    source: string
+    title: string
+    description: string
+    language: string
+    uri: string
+  }
+}
+
+const Card = ({repo}: Props) => {
   return (
     <div style={styles.container}>
       <div className="columns">
@@ -30,7 +40,7 @@ const Card = ({repo}) => {
         <div
           style={{
             ...styles.circle,
-            backgroundColor: colors[repo.language.toLowerCase()] || 'lightgray',
+            backgroundColor: colors[repo.language] || 'lightgray',
           }}
         />
         <div className="is-size-6" style={{marginLeft: 5}}>
@@ -42,11 +52,11 @@ const Card = ({repo}) => {
 }
 
 const colors: {[key: string]: any} = {
-  python: '#3572A5',
-  javascript: '#F1E05A',
+  Python: '#3572A5',
+  Javascript: '#F1E05A',
 }
 
-const styles: any = {
+const styles: {[key: string]: any} = {
   container: {
     width: '90%',
     padding: 16,
