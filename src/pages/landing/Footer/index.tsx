@@ -14,6 +14,9 @@ const styles = {
     paddingRight: 20,
     height: 50,
     width: '100%',
+    borderTopWidth: 1,
+    borderTopStyle: 'solid',
+    borderTopColor: '#eaecef'
   },
 }
 
