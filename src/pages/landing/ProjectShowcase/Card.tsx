@@ -13,14 +13,9 @@ const Card = (props: Props) => {
     <div style={styles.container}>
       <div className="columns">
         <div className="column is-flex" style={styles.centered}>
-          <div
-            style={{
-              width: 30,
-              height: 30,
-              backgroundColor: 'lightgray',
-              borderRadius: '50%',
-            }}
-          />
+          <div style={{width: 30, height: 30}}>
+            <img src={props.source} style={styles.icon} />
+          </div>
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -52,6 +47,7 @@ const Card = (props: Props) => {
 const colors: {[key: string]: any} = {
   Python: '#3572A5',
   Javascript: '#F1E05A',
+  'Node.js': '#F1E05A',
 }
 
 const styles: {[key: string]: any} = {
@@ -81,6 +77,15 @@ const styles: {[key: string]: any} = {
   circle: {
     width: 12,
     height: 12,
+    borderRadius: '50%',
+  },
+  iconContainer: {
+    width: 30,
+    height: 30,
+  },
+  icon: {
+    width: 30,
+    height: 30,
     borderRadius: '50%',
   },
 }

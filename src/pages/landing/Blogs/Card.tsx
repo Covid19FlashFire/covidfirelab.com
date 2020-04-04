@@ -16,11 +16,7 @@ const Card = (props: Props) => {
       className="container is-flex"
       style={styles.container}>
       <div style={{height: 200}}>
-        <img
-          src={props.source}
-          alt="cover"
-          style={{width: '100%', height: '100%', objectFit: 'contain'}}
-        />
+        <img src={props.source} alt="cover-image" style={styles.coverImage} />
       </div>
       <div
         style={{
@@ -66,6 +62,11 @@ const styles: {[key: string]: any} = {
     width: 12,
     height: 12,
     borderRadius: '50%',
+  },
+  coverImage: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
   },
 }
 
