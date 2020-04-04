@@ -3,32 +3,25 @@ import React from 'react'
 // Elements
 import Card from './Card'
 
-// Termporary hardcode 
+// Termporary hardcode
 const DATA = [
   {
-    source: 'image icon url',
-    title: 'Dataset',
-    description: 'Dataset Database และ API ที่พร้อมใช้งานสำหรับสถานการณ์ COVID-19 ของประเทศ',
     type: 'JSON',
-    uri: ''
+    title: 'Dataset',
+    source: 'image icon url',
+    description: 'Dataset Database และ API ที่พร้อมใช้งานสำหรับสถานการณ์ COVID-19 ของประเทศ',
+    url: 'https://github.com/Covid19FlashFire/datasets',
   },
 ]
 
 const CardList = () => (
   <>
-    {DATA.map((repo, index) => (
-      <div className="column is-half" style={styles.centered}>
-        <Card repo={repo} key={index} />
+    {DATA.map((api, index) => (
+      <div key={index} className="column is-half">
+        <Card api={api} />
       </div>
     ))}
   </>
 )
-
-const styles = {
-  centered: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-}
 
 export default CardList
