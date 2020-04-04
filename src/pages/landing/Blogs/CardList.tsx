@@ -10,7 +10,7 @@ const CardList = () => (
   <>
     {CONSTANTS.blogs.DATA.map((blog, index) => (
       <div key={index} className="column is-one-third">
-        <Card blog={blog} />
+        <Card {...blog} />
       </div>
     ))}
   </>

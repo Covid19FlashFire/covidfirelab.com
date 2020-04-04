@@ -10,7 +10,7 @@ const CardList = () => (
   <>
     {CONSTANTS.projects.DATA.map((repo, index) => (
       <div key={index} className="column is-half">
-        <Card repo={repo} />
+        <Card {...repo} />
       </div>
     ))}
   </>

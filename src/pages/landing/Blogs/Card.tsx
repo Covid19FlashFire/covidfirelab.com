@@ -1,25 +1,23 @@
 import React from 'react'
 
 interface Props {
-  blog: {
-    source: string
-    title: string
-    url: string
-    provider: string
-  }
+  source: string
+  title: string
+  url: string
+  provider: string
 }
 
-const Card = ({blog}: Props) => {
+const Card = (props: Props) => {
   return (
     <a
       target="_blank"
       rel="noopener noreferrer"
-      href={blog.url}
+      href={props.url}
       className="container is-flex"
       style={styles.container}>
       <div style={{height: 200}}>
         <img
-          src={blog.source}
+          src={props.source}
           alt="cover"
           style={{width: '100%', height: '100%', objectFit: 'contain'}}
         />
@@ -31,16 +29,11 @@ const Card = ({blog}: Props) => {
           color: '#E4E6EB',
           backgroundColor: 'rgb(58, 59, 60)',
         }}>
-        <div className="is-size-7">{blog.provider}</div>
-        <div className="is-size-6 has-text-weight-semibold ">{blog.title}</div>
+        <div className="is-size-7">{props.provider}</div>
+        <div className="is-size-6 has-text-weight-semibold ">{props.title}</div>
       </div>
     </a>
   )
-}
-
-const colors: {[key: string]: any} = {
-  Python: '#3572A5',
-  Javascript: '#F1E05A',
 }
 
 const styles: {[key: string]: any} = {

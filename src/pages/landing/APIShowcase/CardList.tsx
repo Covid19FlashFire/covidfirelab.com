@@ -18,7 +18,7 @@ const CardList = () => (
   <>
     {DATA.map((api, index) => (
       <div key={index} className="column is-half">
-        <Card api={api} />
+        <Card {...api} />
       </div>
     ))}
   </>

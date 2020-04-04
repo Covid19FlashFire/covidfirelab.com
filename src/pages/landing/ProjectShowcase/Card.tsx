@@ -1,16 +1,14 @@
 import React from 'react'
 
 interface Props {
-  repo: {
-    source: string
-    title: string
-    description: string
-    language: string
-    url: string
-  }
+  source: string
+  title: string
+  description: string
+  language: string
+  url: string
 }
 
-const Card = ({repo}: Props) => {
+const Card = (props: Props) => {
   return (
     <div style={styles.container}>
       <div className="columns">
@@ -26,25 +24,25 @@ const Card = ({repo}: Props) => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href={repo.url}
+            href={props.url}
             className="is-size-6 has-text-weight-semibold"
             style={{marginLeft: 10}}>
-            {repo.title}
+            {props.title}
           </a>
         </div>
       </div>
       <div className="is-size-7" style={styles.body}>
-        {repo.description}
+        {props.description}
       </div>
       <div className="is-flex" style={{...styles.footer, ...styles.centered}}>
         <div
           style={{
             ...styles.circle,
-            backgroundColor: colors[repo.language] || 'lightgray',
+            backgroundColor: colors[props.language] || 'lightgray',
           }}
         />
         <div className="is-size-6" style={{marginLeft: 5}}>
-          {repo.language}
+          {props.language}
         </div>
       </div>
     </div>

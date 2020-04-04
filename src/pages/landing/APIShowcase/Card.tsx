@@ -1,16 +1,15 @@
 import React from 'react'
 
 interface Props {
-  api: {
-    url: string
-    type: string
-    title: string
-    source: string
-    description: string
-  }
+  url: string
+  type: string
+  title: string
+  source: string
+  description: string
 }
 
-const Card = ({api}: Props) => {
+const Card = (props: Props) => {
+
   return (
     <div style={styles.container}>
       <div className="columns">
@@ -26,25 +25,25 @@ const Card = ({api}: Props) => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href={api.url}
+            href={props.url}
             className="is-size-6 has-text-weight-semibold"
             style={{marginLeft: 10}}>
-            {api.title}
+            {props.title}
           </a>
         </div>
       </div>
       <div className="is-size-7" style={styles.body}>
-        {api.description}
+        {props.description}
       </div>
       <div className="is-flex" style={{...styles.footer, ...styles.centered}}>
         <div
           style={{
             ...styles.circle,
-            backgroundColor: colors[api.type] || 'lightgray',
+            backgroundColor: colors[props.type] || 'lightgray',
           }}
         />
         <div className="is-size-6" style={{marginLeft: 5}}>
-          {api.type}
+          {props.type}
         </div>
       </div>
     </div>
